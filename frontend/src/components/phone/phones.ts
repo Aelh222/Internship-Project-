@@ -3,13 +3,13 @@ import type { Phone } from "./types";
 export const phones: Phone[] = [
   {
     id: 1,
-    name: "iPhone 15 Pro",
-    brand: "Apple",
-    price: 670,
+    name: "Infinix Hot 60 Pro Plus",
+    brand: "Infinix",
+    price: 150,
     storage: "256GB",
     condition: "Like New",
     location: "Beirut",
-    image: "/phones/iphone15pro.jpg",
+    image: "/infnic.jpg",
     verified: true,
   },
   {
@@ -20,7 +20,7 @@ export const phones: Phone[] = [
     storage: "256GB",
     condition: "New",
     location: "Tripoli",
-    image: "/phones/s24ultra.jpg",
+    image: "/ultra.jpg",
     verified: true,
   },
   {
@@ -31,7 +31,7 @@ export const phones: Phone[] = [
     storage: "512GB",
     condition: "Good",
     location: "Saida",
-    image: "/phones/pocof7pro.jpg",
+    image: "/images.jpg",
     verified: false,
   },
 ];
