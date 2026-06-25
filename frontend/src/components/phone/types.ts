@@ -4,13 +4,19 @@ export interface Phone {
   brand: string;
   price: number;
   storage: string;
-  ram: string;
-  batteryHealth: number;
   condition: "New" | "Like New" | "Good" | "Fair";
-  color: string;
   location: string;
   image: string;
   verified: boolean;
+
   seller: string;
+  sellerRating: number;
+  completedSales: number;
+  memberSince: string;
+
+  batteryHealth: number;
   description: string;
+  hasOriginalBox: boolean;
+  marketMin: number;
+  marketMax: number;
 }
