@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import type { Phone } from "./types";
 import { BadgeCheck, HardDrive, Heart, MapPin } from "lucide-react";
 
@@ -70,9 +71,12 @@ function PhoneCard({ phone }: PhoneCardProps) {
             </p>
           </div>
 
-          <button className="rounded-xl bg-red-600 px-5 py-2 font-semibold text-white transition hover:bg-red-700">
+          <Link
+            to={`/phones/${phone.id}`}
+            className="rounded-xl bg-red-600 px-5 py-2 font-semibold text-white transition hover:bg-red-700"
+          >
             View Details
-          </button>
+          </Link>
 
         </div>
 
