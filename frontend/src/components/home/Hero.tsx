@@ -1,3 +1,5 @@
+import SearchBar from "./SearchBar";
+
 function Hero() {
   return (
     <section className="bg-slate-50">
@@ -9,6 +11,8 @@ function Hero() {
         <p className="mt-6 max-w-2xl text-lg text-slate-600">
           The trusted marketplace for buying and selling phones across Lebanon.
         </p>
+
+        <SearchBar />
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
           <button className="rounded-lg bg-emerald-600 px-6 py-3 font-semibold text-white transition hover:bg-emerald-700">
