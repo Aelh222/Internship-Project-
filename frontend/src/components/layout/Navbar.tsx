@@ -9,7 +9,7 @@ function Navbar() {
           <img
             src="/pfl-logo.png"
             alt="Phones Fair Lebanon"
-            className="h-12 w-auto"
+            className="h-16 w-auto"
           />
 
           <div className="hidden sm:block">
