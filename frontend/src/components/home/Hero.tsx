@@ -3,7 +3,7 @@ import SearchBar from "./SearchBar";
 
 function Hero() {
   return (
-    <section className="bg-gradient-to-b from-white via-slate-50 to-slate-100">
+    <section className="bg-lineaire-to-b from-white via-slate-50 to-slate-100">
       <div className="mx-auto flex max-w-7xl flex-col items-center px-6 py-24 text-center">
 
         <h1 className="text-5xl font-extrabold leading-tight text-slate-900 md:text-6xl">
