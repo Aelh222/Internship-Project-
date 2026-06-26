@@ -18,9 +18,13 @@ function PhoneCard({ phone }: PhoneCardProps) {
           className="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
 
-        <button className="absolute right-4 top-4 rounded-full bg-white p-2 shadow-md transition hover:bg-red-50">
-          <Heart size={18} className="text-slate-600 hover:text-red-600" />
-        </button>
+<button
+  type="button"
+  aria-label="Save listing"
+  className="absolute right-4 top-4 rounded-full bg-white p-2 shadow-md transition hover:bg-red-50"
+>
+  <Heart size={18} className="text-slate-600 hover:text-red-600" />
+</button>
 
         {phone.verified && (
           <div className="absolute left-4 top-4 flex items-center gap-1 rounded-full bg-green-600 px-3 py-1 text-xs font-semibold text-white">

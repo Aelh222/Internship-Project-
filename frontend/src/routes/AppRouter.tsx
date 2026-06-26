@@ -8,6 +8,7 @@ import Sell from "../pages/Sell/Sell";
 import Register from "../pages/Register/Register";
 import Profile from "../pages/Profile/Profile";
 import MyListings from "../pages/MyListings/MyListings";
+import Favorites from "../pages/Favorites/Favorites";
 function AppRouter() {
   return (
     <BrowserRouter>
@@ -21,6 +22,7 @@ function AppRouter() {
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/my-listings" element={<MyListings />} />
+          <Route path="/favorites" element={<Favorites />} />
         </Route>
       </Routes>
     </BrowserRouter>

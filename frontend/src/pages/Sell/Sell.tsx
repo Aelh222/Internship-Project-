@@ -1,4 +1,9 @@
+import type { FormEvent } from "react";
 function Sell() {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  event.preventDefault();
+  alert("Listing published successfully!");
+}
   return (
     <main className="mx-auto max-w-5xl px-6 py-12">
       {/* Header */}
@@ -15,8 +20,10 @@ function Sell() {
         </div>
       </div>
 
-      <form className="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg">
-        <div className="grid gap-6 md:grid-cols-2">
+<form
+  onSubmit={handleSubmit}
+  className="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg"
+>        <div className="grid gap-6 md:grid-cols-2">
 
           {/* Brand */}
           <div>
@@ -186,13 +193,13 @@ function Sell() {
             <p className="text-sm text-slate-500">
               Up to 10 photos
             </p>
-
-            <input
-              id="photos"
-              type="file"
-              multiple
-              className="hidden"
-            />
+           <input
+            id="photos"
+            type="file"
+            multiple
+            accept="image/png,image/jpeg,image/webp"
+            className="hidden"
+             />
           </label>
         </div>
 

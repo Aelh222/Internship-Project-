@@ -63,14 +63,19 @@ function MyListings() {
   }
 
   function handleSaveEdit(listingId: number) {
+    const price = Number(listingDraft.price);
+
+if (!price || price <= 0) {
+  alert("Please enter a valid price.");
+  return;
+}
     setMyListings((currentListings) =>
       currentListings.map((listing) =>
         listing.id === listingId
           ? {
               ...listing,
-              price: Number(listingDraft.price),
-              location: listingDraft.location,
-              description: listingDraft.description,
+price,
+location: listingDraft.location,              description: listingDraft.description,
             }
           : listing
       )

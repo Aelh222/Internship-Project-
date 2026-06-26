@@ -1,6 +1,11 @@
+import type { FormEvent } from "react";
 import { Link } from "react-router-dom";
 
 function Register() {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  event.preventDefault();
+  alert("Registration will be connected to the backend later.");
+}
   return (
     <main className="flex min-h-[calc(100vh-80px)] items-center justify-center bg-slate-50 px-6 py-12">
       <div className="w-full max-w-md rounded-3xl border border-slate-200 bg-white p-8 shadow-xl">
@@ -21,8 +26,7 @@ function Register() {
           </p>
         </div>
 
-        <form className="mt-10 space-y-5">
-
+<form onSubmit={handleSubmit} className="mt-10 space-y-5">
           {/* First Name */}
           <div>
             <label
@@ -87,6 +91,8 @@ function Register() {
               id="password"
               type="password"
               placeholder="Create a password"
+               minLength={8}
+              required
               className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-red-600"
             />
           </div>

@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
+import type { FormEvent } from "react";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  event.preventDefault();
+  alert("Login will be connected to the backend later.");
+}
 
   return (
     <main className="flex min-h-[calc(100vh-80px)] items-center justify-center bg-slate-50 px-6 py-12">
@@ -24,8 +29,7 @@ function Login() {
           </p>
         </div>
 
-        <form className="mt-10 space-y-6">
-          {/* Email */}
+<form onSubmit={handleSubmit} className="mt-10 space-y-6">          {/* Email */}
           <div>
             <label
               htmlFor="email"
