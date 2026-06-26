@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
 
 function Hero() {
@@ -33,15 +34,25 @@ function Hero() {
           </span>
         </div>
 
+        {/* Action Buttons */}
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-          <button className="rounded-xl bg-red-600 px-7 py-3 font-semibold text-white transition-all duration-200 hover:scale-105 hover:bg-red-700">
-            Browse Phones
-          </button>
 
-          <button className="rounded-xl border border-slate-300 bg-white px-7 py-3 font-semibold transition hover:bg-slate-100">
+          <Link
+            to="/browse"
+            className="rounded-xl bg-red-600 px-7 py-3 text-center font-semibold text-white transition-all duration-200 hover:scale-105 hover:bg-red-700"
+          >
+            Browse Phones
+          </Link>
+
+          <Link
+            to="/sell"
+            className="rounded-xl border border-slate-300 bg-white px-7 py-3 text-center font-semibold transition hover:bg-slate-100"
+          >
             Sell Your Phone
-          </button>
+          </Link>
+
         </div>
+
       </div>
     </section>
   );

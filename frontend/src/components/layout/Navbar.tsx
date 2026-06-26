@@ -4,6 +4,7 @@ function Navbar() {
   return (
     <nav className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
+
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
           <img
@@ -24,7 +25,8 @@ function Navbar() {
         </Link>
 
         {/* Navigation */}
-        <div className="flex items-center gap-8 font-body text-sm font-semibold">
+        <div className="flex items-center gap-7 font-body text-sm font-semibold">
+
           <Link
             to="/"
             className="transition-colors hover:text-red-600"
@@ -36,14 +38,28 @@ function Navbar() {
             to="/browse"
             className="transition-colors hover:text-red-600"
           >
-            Browse Phones
+            Browse
           </Link>
 
           <Link
             to="/sell"
             className="transition-colors hover:text-red-600"
           >
-            Sell Phone
+            Sell
+          </Link>
+
+          <Link
+            to="/favorites"
+            className="transition-colors hover:text-red-600"
+          >
+            Favorites
+          </Link>
+
+          <Link
+            to="/profile"
+            className="transition-colors hover:text-red-600"
+          >
+            Profile
           </Link>
 
           <Link
@@ -59,6 +75,7 @@ function Navbar() {
           >
             Register
           </Link>
+
         </div>
       </div>
     </nav>
