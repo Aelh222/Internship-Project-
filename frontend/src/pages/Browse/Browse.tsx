@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import Filters, { type FilterValues } from "../../components/phone/Filters";
 import PhoneCard from "../../components/phone/PhoneCard";
 import { phones } from "../../components/phone/phones";
+import SearchBar from "../../components/home/SearchBar";
 
 const initialFilters: FilterValues = {
   brand: "",
@@ -20,8 +21,7 @@ function Browse() {
   const filteredPhones = phones.filter((phone) => {
     const matchesSearch =
       phone.name.toLowerCase().includes(searchTerm) ||
-      phone.brand.toLowerCase().includes(searchTerm) ||
-      phone.location.toLowerCase().includes(searchTerm);
+      phone.brand.toLowerCase().includes(searchTerm) 
 
     const matchesBrand = !filters.brand || phone.brand === filters.brand;
 
@@ -58,6 +58,8 @@ function Browse() {
           Explore verified phone listings from across Lebanon.
         </p>
       </div>
+      
+      <SearchBar />
 
       <Filters filters={filters} onChange={setFilters} />
 
